@@ -1,0 +1,40 @@
+/* Estilo para la imagen de fondo */
+.hero {
+  background-image: url('../src/Imagenes/evento.jpg'); /* Ruta relativa */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Navbar transparente */
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+}
+
+/* Botones de navegación */
+.nav-link {
+  color: white !important;
+  margin-right: 15px;
+}
+
+/* Botón destacado estilo "Contacto" */
+.btn-highlight {
+  background-color: #ff7f00; /* Naranja */
+  color: white;
+  border-radius: 25px;
+}
+
+.btn-highlight:hover {
+  background-color: #ff9c33;
+}
+
+
+.dropdown-menu {
+  display: none; /* Ocultar el menú por defecto */
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block; /* Mostrar el menú cuando el cursor está sobre el ítem */
+}
+
