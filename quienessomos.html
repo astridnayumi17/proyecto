@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>¿Quiénes Somos? - SAGA Events</title>
+    <style>
+          .hero {
+        position: relative;
+        color: white;
+        text-align: center;
+        height: 80vh;
+        background-image: url('Imagenes/fondo.png');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de opacidad */
+        z-index: 1;
+      }
+
+      .hero .text-center {
+        position: relative;
+        z-index: 2;
+      }
+
+        /* Estilo adicional para secciones */
+        .section-bg-dark {
+          background-color: #2c3e50;
+          color: white;
+          padding: 4rem 0;
+        }
+
+        .section-bg-light {
+          background-color: #f9f9f9;
+          padding: 4rem 0;
+        }
+
+        .section-header {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          position: relative;
+        }
+
+        .section-header::after {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 4px;
+          background-color: #ff6f61;
+          margin: 0.5rem auto 0;
+        }
+
+        .section-content {
+          font-size: 1.1rem;
+          line-height: 1.8;
+          margin-bottom: 2rem;
+        }
+
+        ul.section-values li {
+          margin-bottom: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <body>
+<!-- Barra de navegación -->
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="Imagenes/logo.jpg" alt="Logo Prueba" width="40" height="40" class="d-inline-block align-top">
+      SAGA Events
+    </a>
+
+    <!-- Botón para dispositivos móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+
+      <!-- Menú desplegable para Quienes somos -->  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="quienessomos.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Quienes Somos?
+          </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownQuienesSomos">
+          <li><a class="dropdown-item" href="quienessomos.html#mision">Misión</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#vision">Visión</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#valores">Valores</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#nuestroequipo">Nuestro Equipo</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="quienessomos.html#historia">Historia</a></li>
+        </ul>
+        </li>
+
+
+        <!-- Menú desplegable para Mobiliario -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="mobiliario.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mobiliario
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="mobiliario.html#mesas">Mesas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#sillas">Sillas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#inflables">Inflables</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#carpas">Carpas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#tarimas">Tarimas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#periqueras">Periqueras</a></li>
+            <li><hr class="dropdown-divider"></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotiza.html">Cotiza tu Evento</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-highlight" href="contacto.html">Contacto</a>
+        </li>
+        
+        <!-- Botón de Iniciar Sesión -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="iniciar-sesion.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Iniciar Sesión
+          </a>
+          <div class="dropdown-menu" aria-labelledby="loginDropdown">
+            <a class="dropdown-item" href="#">Configuración de Cuenta</a>
+            <a class="dropdown-item" href="#">Puntos</a>
+            <a class="dropdown-item" href="#">Registros de Rentas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="registrocliente.html">Registro Clientes</a>
+            <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+
+    <!-- Hero Banner -->
+    <div class="hero d-flex justify-content-center align-items-center" 
+         style="background-image: url('Imagenes/fondo.png'); height: 80vh; background-size: cover; background-position: center;">
+      <div class="text-center text-white">
+        <h1 class="display-4 fw-bold">¿Quiénes Somos?</h1>
+        <p class="lead">Conoce más sobre nuestra historia, valores y visión.</p>
+      </div>
+    </div>
+
+    <!-- Sección de Misión -->
+    <section id="mision" class="section-bg-dark text-center">
+      <div class="container">
+        <h2 class="section-header">Misión</h2>
+        <p class="section-content">Brindar una solución integral y eficiente para la organización de eventos, 
+          facilitando la renta de inflables, carpas, sillas y mesas, mediante un sistema 
+          intuitivo que optimiza la disponibilidad, gestión de inventarios y atención a clientes.</p>
+      </div>
+    </section>
+
+    <!-- Sección de Visión -->
+    <section id="vision" class="section-bg-light text-center">
+      <div class="container">
+        <h2 class="section-header">Visión</h2>
+        <p class="section-content">Ser la plataforma líder en soluciones tecnológicas para la gestión de eventos, 
+          transformando la forma en que los banqueteros organizan y gestionan su inventario, 
+          ofreciendo herramientas innovadoras que mejoren la eficiencia operativa.</p>
+      </div>
+    </section>
+
+    <!-- Sección de Valores -->
+    <section id="valores" class="section-bg-dark text-center">
+      <div class="container">
+        <h2 class="section-header">Valores</h2>
+        <ul class="section-values list-unstyled">
+          <li><strong>Compromiso:</strong> Servicio confiable y puntual.</li>
+          <li><strong>Innovación:</strong> Mejora continua con tecnología avanzada.</li>
+          <li><strong>Transparencia:</strong> Comunicación clara y abierta.</li>
+          <li><strong>Eficiencia:</strong> Soluciones rápidas y efectivas.</li>
+          <li><strong>Sostenibilidad:</strong> Prácticas responsables con el medio ambiente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección de Historia -->
+    <section id="historia" class="section-bg-light text-center">
+      <div class="container">
+        <h2 class="section-header">Nuestra Historia</h2>
+        <p class="section-content">El sistema nació para simplificar y mejorar la gestión de inventarios 
+          y reservas de banqueteros, optimizando procesos mediante tecnología para ofrecer servicios de calidad.</p>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

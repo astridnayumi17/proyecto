@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Cotiza tu Evento - SAGA Events</title>
+    <script>
+      // Función para calcular el monto total
+      function calcularTotal() {
+        const precios = {
+          mesas: 100,
+          sillas: 50,
+          inflables: 500,
+          carpas: 300
+        };
+
+        let total = 0;
+
+        const cantidadMesas = parseInt(document.getElementById("cantidadMesas").value) || 0;
+        const cantidadSillas = parseInt(document.getElementById("cantidadSillas").value) || 0;
+        const cantidadInflables = parseInt(document.getElementById("cantidadInflables").value) || 0;
+        const cantidadCarpas = parseInt(document.getElementById("cantidadCarpas").value) || 0;
+
+        total += cantidadMesas * precios.mesas;
+        total += cantidadSillas * precios.sillas;
+        total += cantidadInflables * precios.inflables;
+        total += cantidadCarpas * precios.carpas;
+
+        document.getElementById("montoTotal").innerText = `Monto Total: $${total} MXN`;
+      }
+    </script>
+    <style>
+      /* Ajuste del margen superior para que el formulario no quede oculto */
+      .hero {
+        margin-top: 50px; /* Espacio debajo de la barra de navegación */
+        height: auto; /* Permite que la altura del contenedor crezca según el contenido */
+      }
+    </style>
+  </head>
+  <body>
+ <!-- Barra de navegación -->
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="Imagenes/logo.jpg" alt="Logo Prueba" width="40" height="40" class="d-inline-block align-top">
+      SAGA Events
+    </a>
+
+    <!-- Botón para dispositivos móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+
+      <!-- Menú desplegable para Quienes somos -->  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="quienessomos.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Quienes Somos?
+          </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownQuienesSomos">
+          <li><a class="dropdown-item" href="quienessomos.html#mision">Misión</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#vision">Visión</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#valores">Valores</a></li>
+          <li><a class="dropdown-item" href="quienessomos.html#nuestroequipo">Nuestro Equipo</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="quienessomos.html#historia">Historia</a></li>
+        </ul>
+        </li>
+
+
+        <!-- Menú desplegable para Mobiliario -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="mobiliario.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mobiliario
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="mobiliario.html#mesas">Mesas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#sillas">Sillas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#inflables">Inflables</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#carpas">Carpas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#tarimas">Tarimas</a></li>
+            <li><a class="dropdown-item" href="mobiliario.html#periqueras">Periqueras</a></li>
+            <li><hr class="dropdown-divider"></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotiza.html">Cotiza tu Evento</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-highlight" href="contacto.html">Contacto</a>
+        </li>
+        
+        <!-- Botón de Iniciar Sesión -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="iniciar-sesion.html" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Iniciar Sesión
+          </a>
+          <div class="dropdown-menu" aria-labelledby="loginDropdown">
+            <a class="dropdown-item" href="#">Configuración de Cuenta</a>
+            <a class="dropdown-item" href="#">Puntos</a>
+            <a class="dropdown-item" href="#">Registros de Rentas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="registrocliente.html">Registro Clientes</a>
+            <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+
+    <!-- Sección principal -->
+    <div class="hero d-flex justify-content-center align-items-center" 
+         style="background-image: url('Imagenes/fondo.png'); background-size: cover; background-position: center;">
+      <div class="container text-white bg-dark p-5 rounded" style="max-width: 700px; opacity: 0.9;">
+        <h1 class="text-center mb-4">Cotiza tu Evento</h1>
+        <p class="text-center mb-4">Completa el formulario y te enviaremos una cotización personalizada.</p>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="tipoEvento" class="form-label">Tipo de Evento</label>
+            <select class="form-select" id="tipoEvento" required>
+              <option value="" disabled selected>Selecciona un tipo de evento</option>
+              <option value="Boda">Boda</option>
+              <option value="Cumpleaños">Cumpleaños</option>
+              <option value="Fiesta Corporativa">Fiesta Corporativa</option>
+              <option value="Bautizo">Bautizo</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="fechaEvento" class="form-label">Fecha del Evento</label>
+            <input type="date" class="form-control" id="fechaEvento" required>
+          </div>
+          <hr class="text-white">
+          <div class="mb-3">
+            <h5 class="text-center mb-3">Selecciona tu Mobiliario</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="cantidadMesas" class="form-label">Cantidad de Mesas</label>
+                <input type="number" class="form-control" id="cantidadMesas" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+              <div class="col-md-6">
+                <label for="cantidadSillas" class="form-label">Cantidad de Sillas</label>
+                <input type="number" class="form-control" id="cantidadSillas" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <label for="cantidadInflables" class="form-label">Cantidad de Inflables</label>
+                <input type="number" class="form-control" id="cantidadInflables" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+              <div class="col-md-6">
+                <label for="cantidadCarpas" class="form-label">Cantidad de Carpas</label>
+                <input type="number" class="form-control" id="cantidadCarpas" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+              <div class="col-md-6">
+                <label for="cantidadCarpas" class="form-label">Cantidad de Tarimas</label>
+                <input type="number" class="form-control" id="cantidadCarpas" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+              <div class="col-md-6">
+                <label for="cantidadCarpas" class="form-label">Cantidad de Periqueras</label>
+                <input type="number" class="form-control" id="cantidadCarpas" placeholder="0" min="0" onchange="calcularTotal()">
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h4 id="montoTotal" class="text-center">Monto Total: $0 MXN</h4>
+          </div>
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary">Enviar Cotización</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
